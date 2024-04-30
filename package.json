@@ -1,9 +1,9 @@
 {
   "name": "@Ruslan1kHasanov/tested_lib.git",
   "publishConfig": {
-    "registry": "git@github.com:Ruslan1kHasanov/tested_lib.git"
+    "registry": "https://npm.pkg.github.com/tested_lib"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple template for a custom React component library",
   "scripts": {
     "rollup": "rollup -c",
@@ -11,7 +11,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "RUSLAN",
+  "author": "Ruslan",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.0",
