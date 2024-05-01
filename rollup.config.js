@@ -23,7 +23,7 @@ export default [
       },
     ],
     plugins: [
-      styles({ modules: true, mode: "emit", import: true }),
+      styles({ mode: "emit", import: true }),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
