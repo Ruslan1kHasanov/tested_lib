@@ -1,7 +1,7 @@
 import "./Input.css";
 import "./Password.css";
 import {TInputProps} from "../../types/InputTypes";
-import React, {useState} from "react";
+import React from "react";
 
 type TInputTypes = "basicInput" | "flyInput" | "underlined";
 type InputCmp = React.FC<TInputProps<TInputTypes>> & {
@@ -59,7 +59,7 @@ const Password: React.FC<TInputProps<TInputTypes>> = ({
                                                           sizeType = "medium",
                                                           ...props
                                                       }: TInputProps<TInputTypes>) => {
-    const [isTextShowed, setIsTextShowed] = useState(false);
+    const [isTextShowed, setIsTextShowed] = React.useState(false);
     let classNameArr = ["uiXeny-password uiXeny-input"];
     props.className && classNameArr.push(props.className);
 
@@ -98,7 +98,7 @@ const Password: React.FC<TInputProps<TInputTypes>> = ({
             <input type={isTextShowed ? "text" : "password"} className={classNameArr.join(' ')} {...props}/>
             <button className="uiXeny-password_show_button"
                     dangerouslySetInnerHTML={{__html: isTextShowed ? openedEye : closedEye}}
-                    onClick={() => setIsTextShowed(!isTextShowed)}></button>
+                    onClick={() => setIsTextShowed(() => !isTextShowed)}></button>
         </div>
     )
 };
