@@ -5,6 +5,7 @@ import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
 
 const packageJson = require("./package.json");
+import styles from "rollup-plugin-styles";
 
 export default [
   {
@@ -22,6 +23,7 @@ export default [
       },
     ],
     plugins: [
+      styles({ modules: true, mode: "emit", import: true }),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),

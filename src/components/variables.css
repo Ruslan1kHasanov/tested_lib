@@ -1,3 +1,7 @@
+.ads{
+    color: red;
+}
+
 :root {
     /* Основные цвета */
     --uiXeny-primary-color: #0570FF;
