@@ -23,11 +23,11 @@ export default [
       },
     ],
     plugins: [
-      styles({import: true }),
+      styles({import: true}),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
+      // postcss(),
     ],
   },
   {
